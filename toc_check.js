@@ -68,10 +68,16 @@ function checkReportPresent() {
       }
     } else if (host == 'vast-journey-9935.herokuapp.com' || host == 'www.glowfic.com' || host == 'glowfic.com') {
       /* Constellation */
-      if (path.match('/posts/?$|/boards(/\\d*)?$|/posts/unread$')){
+      if (path.match('/posts/?$|/boards(/\\d*)?$|/posts/unread|/reports/daily$')){
         var all_things = true;
         var old_things = 0;
-        var now = new Date($('#content > span, #content > form > span').get(0).innerHTML.trim());
+        var date_bit = $('#content > span, #content > form > span').get(0);
+        if (date_bit) {
+          var now = new Date(date_bit.innerHTML.trim());
+        } else {
+          var now = new Date();
+          msg_error("No 'pretty time' tag found. Using current time.");
+        }
         $("#content tr:has(.post-subject)").each(function(){
           var thing = $($('td.post-subject a:not(:has(img))', this).get(0));
           var post_url = thing.attr('href');
