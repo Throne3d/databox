@@ -39,7 +39,7 @@ function checkReportPresent() {
     var obj = {'title_extras': '', 'report_flags': ''};
     obj['title'] = $(thing).text().trim();
     obj['href'] = $(thing).attr('href');
-    if (obj['href'][0] == '/') obj['href'] = 'https://www.glowfic.com' + obj['href']
+    if (obj['href'][0] == '/') obj['href'] = 'https://glowfic.com' + obj['href']
     console.log(obj);
     msg('"' + obj['title'] + '" with URL: <a href="' + obj['href'] + '" style="color:#000;font-weight:bold;">' + obj['href'] + '</a>', {'simplify_console': true});
   }
