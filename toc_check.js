@@ -1,6 +1,6 @@
 "use strict";
 function checkReportPresent() {
-  var url = 'https://bitbucket.org/Throne3d/databox/raw/master/toc_report.json'
+  var url = 'https://raw.githubusercontent.com/Throne3d/databox/master/toc_report.json'
  
   $("#report_present_check").remove();
   
