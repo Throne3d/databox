@@ -89,3 +89,4 @@ DEFAULT_USER="throne3d"
 
 eval $(perl -I${HOME}/perl5/lib/perl5 -Mlocal::lib)
 
+alias win32="WINEPREFIX='$HOME/prefix32' WINEARCH=win32"
