@@ -90,3 +90,18 @@ DEFAULT_USER="throne3d"
 eval $(perl -I${HOME}/perl5/lib/perl5 -Mlocal::lib)
 
 alias win32="WINEPREFIX='$HOME/prefix32' WINEARCH=win32"
+
+function mountgdrive() {
+  if [[ ! -e "$HOME/GDriveMount" ]]
+  then
+    if ! mountpoint -q -- "$HOME/GDriveMount"
+    then
+      mkdir "$HOME/GDriveMount"
+    fi
+  fi
+  rclone mount gdrive: $HOME/GDriveMount &
+}
+function unmountgdrive() {
+  fusermount -u "$HOME/GDriveMount"
+}
+# stop the mount with "fusermount -u $HOME/GDriveMount"
