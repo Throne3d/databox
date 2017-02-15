@@ -104,4 +104,17 @@ function mountgdrive() {
 function unmountgdrive() {
   fusermount -u "$HOME/GDriveMount"
 }
-# stop the mount with "fusermount -u $HOME/GDriveMount"
+
+function mountonedrive() {
+  if [[ ! -e "$HOME/OneDriveMount" ]]
+  then
+    if ! mountpoint -q -- "$HOME/OneDriveMount"
+    then
+      mkdir "$HOME/OneDriveMount"
+    fi
+  fi
+  rclone mount onedrive: $HOME/OneDriveMount &
+}
+function unmountonedrive() {
+  fusermount -u "$HOME/OneDriveMount"
+}
