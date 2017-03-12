@@ -118,3 +118,7 @@ function mountonedrive() {
 function unmountonedrive() {
   fusermount -u "$HOME/OneDriveMount"
 }
+
+# to cache C compilation stuff
+export USE_CCACHE=1
+export CCACHE_COMPRESS=1
