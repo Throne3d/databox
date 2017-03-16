@@ -122,3 +122,6 @@ function unmountonedrive() {
 # to cache C compilation stuff
 export USE_CCACHE=1
 export CCACHE_COMPRESS=1
+
+# for the Jack compiler for LineageOS
+export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4G"
