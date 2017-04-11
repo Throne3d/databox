@@ -1,9 +1,9 @@
 "use strict";
 function checkReportPresent() {
   var url = 'https://raw.githubusercontent.com/Throne3d/databox/master/toc_report.json'
- 
+
   $("#report_present_check").remove();
-  
+
   function path(){ return window.location.pathname; }
   function stripHTML(text) {
     var htmlRemove = /\<\/?\w+(\s+[^\>]+)?\>/g;
@@ -28,13 +28,13 @@ function checkReportPresent() {
     }
     msg_box.append(thing.toString()).append("<br />");
   }
-  
+
   function msg_error(thing) {
     thing = "<span style='color:#F00;font-weight:bold'>" + thing + "</span>";
     console.error(stripHTML(thing));
     return msg(thing, {'do_console': false});
   }
-  
+
   function alert_thread(thing) {
     var obj = {'title_extras': '', 'report_flags': ''};
     obj['title'] = $(thing).text().trim();
@@ -43,7 +43,7 @@ function checkReportPresent() {
     console.log(obj);
     msg('"' + obj['title'] + '" with URL: <a href="' + obj['href'] + '" style="color:#000;font-weight:bold;">' + obj['href'] + '</a>', {'simplify_console': true});
   }
- 
+
   $.getJSON(url, {_: new Date().getTime()}, function(data) {
     /*list = JSON.parse(data);*/
     console.log("loaded toc_report.json");
@@ -54,7 +54,7 @@ function checkReportPresent() {
       var chapter_url = chapter['url'].replace('http://', 'https://').replace('https://vast-journey-9935.herokuapp.com', '').replace('https://www.glowfic.com', '').replace('https://glowfic.com', '').replace(/(\?|&)style=site/, '').replace(/(\?|&)view=flat/, '');
       list.push(chapter_url);
     }
-    
+
     var path = window.location.pathname;
     var host = window.location.hostname;
     if (host.endsWith('.dreamwidth.org')) {
@@ -69,6 +69,11 @@ function checkReportPresent() {
     } else if (host == 'vast-journey-9935.herokuapp.com' || host == 'www.glowfic.com' || host == 'glowfic.com') {
       /* Constellation */
       if (path.match('/posts/?$|/boards(/\\d*)?$|/posts/unread|/reports/daily$')){
+        // /posts/, /boards/, /boards/:id, /posts/unread, /reports/daily
+        if (path.match('/boards/29$')) {
+          msg("<em>Board is ignored from the report.</em>", {'simplify_console': true});
+          return;
+        }
         var all_things = true;
         var old_things = 0;
         var date_bit = $('#content > span, #content > form > span').get(0);
@@ -81,7 +86,17 @@ function checkReportPresent() {
         $("#content tr:has(.post-subject)").each(function(){
           var thing = $($('td.post-subject a:not(:has(img))', this).get(0));
           var post_url = thing.attr('href');
-          
+
+          var board = $('td.post-board a', this);
+          if (board) {
+            var board_url = board.attr('href');
+            if (board_url.match('/boards/29$')) {
+              // skip MWF (board ID 29)
+              console.log("Skipping " + thing.text().trim() + " (in a skipped continuity)");
+              return;
+            }
+          }
+
           var imgs = $('td.post-completed img', this);
           var status = 'incomplete';
           imgs.each(function(){
@@ -89,12 +104,12 @@ function checkReportPresent() {
             if (title.indexOf('Hiatus') > -1) status = 'hiatus'
             else if (title.indexOf('Complete') > -1) status = 'complete';
           });
-          
+
           var date = $("td.post-time", this).text().split('by')[0].trim();
           var dater = Date.parse(date);
-          
+
           var days_since = (now - dater) / 1000 / 60 / 60 / 24;
-          
+
           if (!(((status == 'incomplete' || status == 'hiatus') && days_since < 32) || (status == 'complete' && days_since < 8))) {
             old_things += 1;
             console.log("Old thing: " + thing.text().trim());
@@ -121,7 +136,7 @@ function checkReportPresent() {
     }
   });
 }
- 
+
 if(typeof jQuery=='undefined') {
     var headTag = document.getElementsByTagName("head")[0];
     var jqTag = document.createElement('script');
