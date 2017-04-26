@@ -68,7 +68,7 @@ function checkReportPresent() {
       }
     } else if (host == 'vast-journey-9935.herokuapp.com' || host == 'www.glowfic.com' || host == 'glowfic.com') {
       /* Constellation */
-      if (path.match('/posts/?$|/boards(/\\d*)?$|/posts/unread|/reports/daily$')){
+      if (path.match('/posts/?$|/boards/\\d+$|/posts/unread|/reports/daily$|/users/\\d+')){
         // /posts/, /boards/, /boards/:id, /posts/unread, /reports/daily
         if (path.match('/boards/29$')) {
           msg("<em>Board is ignored from the report.</em>", {'simplify_console': true});
@@ -88,7 +88,7 @@ function checkReportPresent() {
           var post_url = thing.attr('href');
 
           var board = $('td.post-board a', this);
-          if (board) {
+          if (board.length > 0) {
             var board_url = board.attr('href');
             if (board_url.match('/boards/29$')) {
               // skip MWF (board ID 29)
