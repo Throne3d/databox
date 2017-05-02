@@ -70,7 +70,8 @@ function checkReportPresent() {
       /* Constellation */
       if (path.match('/posts/?$|/boards/\\d+$|/posts/unread|/reports/daily$|/users/\\d+')){
         // /posts/, /boards/, /boards/:id, /posts/unread, /reports/daily
-        if (path.match('/boards/29$')) {
+        var ignore_board_match = /\/boards\/(29|50)$/;
+        if (path.match(ignore_board_match)) {
           msg("<em>Board is ignored from the report.</em>", {'simplify_console': true});
           return;
         }
@@ -90,7 +91,7 @@ function checkReportPresent() {
           var board = $('td.post-board a', this);
           if (board.length > 0) {
             var board_url = board.attr('href');
-            if (board_url.match('/boards/29$')) {
+            if (board_url.match(ignore_board_match)) {
               // skip MWF (board ID 29)
               console.log("Skipping " + thing.text().trim() + " (in a skipped continuity)");
               return;
