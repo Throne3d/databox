@@ -1,6 +1,12 @@
 [user]
 	email = throne3d@gmail.com
 	name = Edward Jones
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore
+[credential]
+	helper = cache
 [color]
 	ui = auto
 [pager]
