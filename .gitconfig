@@ -5,6 +5,7 @@
 	default = simple
 [core]
 	excludesfile = ~/.gitignore
+	editor = nano
 [credential]
 	helper = cache
 [color]
