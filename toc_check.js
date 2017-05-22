@@ -108,7 +108,7 @@ function checkReportPresent() {
 
           var date = $("td.post-time", this).text().split('by')[0].trim();
           if (date.length <= 9 && path.match('/reports/daily$')) {
-            header = $("thead tr th:not(.sub)", $(this).parents('table'))
+            var header = $("thead tr th:not(.sub)", $(this).parents('table'));
             date = header.text().replace('Daily Report -', '').trim() + ' ' + date;
             console.log("parsed header for date:", date);
           }
