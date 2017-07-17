@@ -135,3 +135,14 @@ unsetopt RM_STAR_SILENT
 
 # Add Scala to PATH
 export PATH="$PATH:$HOME/scala-2.12.2/bin"
+
+# distcc
+# export DISTCC_HOSTS='192.168.1.160'
+# export PATH="/usr/lib/distcc/bin:$PATH"
+export CCACHE_PREFIX="distcc"
+
+# Vulkan
+export VULKAN_SDK=/home/throne3d/vulkan/VulkanSDK/1.0.51.0/x86_64
+export PATH=$PATH:$VULKAN_SDK/x86_64/bin
+export LD_LIBRARY_PATH=$VULKAN_SDK/x86_64/
+export VK_LAYER_PATH=$VULKAN_SDK/x86_64/etc/explicit_layer.d
