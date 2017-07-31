@@ -120,6 +120,7 @@ function unmountonedrive() {
 }
 
 # to cache C compilation stuff
+export PATH="/usr/lib/ccache/bin:$PATH"
 export USE_CCACHE=1
 export CCACHE_COMPRESS=1
 
@@ -139,7 +140,7 @@ export PATH="$PATH:$HOME/scala-2.12.2/bin"
 # distcc
 # export DISTCC_HOSTS='192.168.1.160'
 # export PATH="/usr/lib/distcc/bin:$PATH"
-export CCACHE_PREFIX="distcc"
+#export CCACHE_PREFIX="distcc"
 
 # Vulkan
 export VULKAN_SDK=/home/throne3d/vulkan/VulkanSDK/1.0.51.0/x86_64
