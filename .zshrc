@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/throne3d/.oh-my-zsh
+export ZSH=/home/throne3d/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -147,3 +147,6 @@ export VULKAN_SDK=/home/throne3d/vulkan/VulkanSDK/1.0.51.0/x86_64
 export PATH=$PATH:$VULKAN_SDK/x86_64/bin
 export LD_LIBRARY_PATH=$VULKAN_SDK/x86_64/
 export VK_LAYER_PATH=$VULKAN_SDK/x86_64/etc/explicit_layer.d
+
+# Editor
+export EDITOR=nano
