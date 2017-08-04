@@ -30,10 +30,11 @@ $(PKGS):
 	    if [[ $$PKGBUILD == 0 ]]; then
 	      echo " new version built; please install package '$@'."
 	      echo $$PKGOUT
-	    elif (echo $$PKGOUT | grep "package has already been built" > /dev/null) then
+	    elif (echo $$PKGOUT | grep "package" | grep "has already been built" > /dev/null) then
 	      echo " no new version"
 	    else
-	      echo " error encountered.\n$$PKGOUT"
+	      echo " error encountered."
+	      echo "$$PKGOUT"
 	      exit 1
 	    fi
 	  fi
