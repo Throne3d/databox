@@ -26,17 +26,26 @@ $(PKGS):
 	  else
 	    echo "$@: PKGBUILD not changed, running makepkg for new version…"
 	    # now using pacaur instead of this
-	    PKGOUT=$$(makepkg 2>&1)
-	    PKGBUILD=$$?
-	    if [[ $$PKGBUILD == 0 ]]; then
-	      echo "$@: New version built; please install package."
-	      echo $$PKGOUT
-	    elif (echo $$PKGOUT | grep "package" | grep "has already been built" > /dev/null) then
-	      echo "$@: No new version"
-	    else
-	      echo "$@: Error encountered."
-	      echo "$$PKGOUT"
-	      exit 1
+	    PKGOUT=$$(makepkg -o 2>&1)
+	    PKGLOADED=$$?
+	    if [[ $$PKGLOADED == 0 ]]; then
+	      # source makepkg libraries and print package names
+	      export PKGS=$$(/bin/bash -c 'LIBRARY=$${LIBRARY:-"/usr/share/makepkg"}
+	        for lib in "$$LIBRARY"/*.sh; do
+	          source "$$lib"
+	        done
+	        source PKGBUILD
+	        print_all_package_names')
+	      allbuilt=1
+	      echo $$PKGS | while read line ; do
+	        if [[ ! -f $$line ]]; then allbuilt=0; fi
+	      done
+	      if (( allbuilt )); then
+	        echo "$@: Package already built"
+	      else
+	        echo "$@: Building and installing package…"
+	        makepkg -si --needed --noconfirm
+	      fi
 	    fi
 	  fi
 	else
