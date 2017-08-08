@@ -150,3 +150,14 @@ export VK_LAYER_PATH=$VULKAN_SDK/x86_64/etc/explicit_layer.d
 
 # Editor
 export EDITOR=nano
+
+# Arch changes
+if lsb_release -i | grep "Arch" > /dev/null; then
+  # Java Home
+  export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
+  # Gem executables
+  export PATH="/home/throne3d/.gem/ruby/2.4.0/bin:$PATH"
+fi
+
+# For local node module commands with zsh
+alias npm-exec='PATH=$(npm bin):$PATH'
