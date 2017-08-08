@@ -5,7 +5,7 @@ getpkgs: $(PKGS)
 
 .ONESHELL:
 $(PKGS):
-	@echo "- $@"
+	@echo "$@: Started"
 	cd $@
 	git diff --quiet HEAD PKGBUILD
 	BUILDCHANGED=$$?
@@ -21,19 +21,20 @@ $(PKGS):
 	if [[ $$GITPULLED == 0 ]]; then
 	  # git pull succeeded
 	  if [[ $$GITTODATE != 0 ]]; then
-	  	echo "Pulled from git"
-	  	makepkg
+	    echo "$@: Pulled PKGBUILD from git, running makepkg"
+	    makepkg -si --noconfirm --needed
 	  else
-	    echo -n "Package not changed, running makepkg for new version…"
+	    echo "$@: PKGBUILD not changed, running makepkg for new version…"
+	    # now using pacaur instead of this
 	    PKGOUT=$$(makepkg 2>&1)
 	    PKGBUILD=$$?
 	    if [[ $$PKGBUILD == 0 ]]; then
-	      echo " new version built; please install package '$@'."
+	      echo "$@: New version built; please install package."
 	      echo $$PKGOUT
 	    elif (echo $$PKGOUT | grep "package" | grep "has already been built" > /dev/null) then
-	      echo " no new version"
+	      echo "$@: No new version"
 	    else
-	      echo " error encountered."
+	      echo "$@: Error encountered."
 	      echo "$$PKGOUT"
 	      exit 1
 	    fi
