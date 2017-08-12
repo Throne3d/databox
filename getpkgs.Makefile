@@ -5,8 +5,7 @@ getpkgs: $(PKGS)
 
 .ONESHELL:
 $(PKGS):
-	@echo "- $@"
-	cd $@
+	@cd $@
 	PULLOUT=$$(git pull)
 	GITPULLED=$$?
 	echo $$PULLOUT | grep "Already up-to-date." > /dev/null
@@ -14,12 +13,14 @@ $(PKGS):
 	if [[ $$GITPULLED == 0 ]]; then
 		# git pull succeeded
 		if [[ $$GITTODATE != 0 ]]; then
-			echo "Pulled from git"
-			makepkg
-		else echo "Package not changed"
+			echo "$@: Pulled from git"
+			makepkg -si --needed --noconfirm
+		else
+	    echo "$@: Package not changed"
+	    #makepkg -si --needed --noconfirm
 		fi
 	else
-		echo "Git pull failed"
+		echo "$@: Git pull failed"
 		echo $$PULLOUT
 		exit 1
 	fi
