@@ -1,3 +1,15 @@
+# dependencies: thefuck, perl, nvm, avn-nvm
+
+# thefuck:
+# sudo -H pip3 install thefuck # maybe pip2 if this fails?
+# perl:
+# cpan #?
+# nvm:
+# https://github.com/creationix/nvm#install-script
+# avn-nvm:
+# npm install -g avn avn-nvm avn-n
+# avn setup
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
