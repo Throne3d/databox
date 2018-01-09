@@ -1,14 +1,18 @@
-# dependencies: thefuck, perl, nvm, avn-nvm
+# dependencies: thefuck, perl, nvm, avn-nvm, travis.rb
 
-# thefuck:
+## thefuck:
 # sudo -H pip3 install thefuck # maybe pip2 if this fails?
-# perl:
+## perl:
 # cpan #?
-# nvm:
+## nvm:
 # https://github.com/creationix/nvm#install-script
-# avn-nvm:
+## avn-nvm:
 # npm install -g avn avn-nvm avn-n
 # avn setup
+## travis.rb:
+# https://github.com/travis-ci/travis.rb#installation
+# gem install travis
+# travis status # now press y to install shell completion
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
