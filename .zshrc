@@ -1,5 +1,8 @@
-# dependencies: thefuck, perl, nvm, avn-nvm, travis.rb
+# dependencies: powerline font, thefuck, perl, nvm, avn-nvm, travis.rb
 
+## powerline font for agnoster:
+# https://github.com/robbyrussell/oh-my-zsh/wiki/Themes#agnoster
+# sudo apt install fonts-powerline
 ## thefuck:
 # sudo -H pip3 install thefuck # maybe pip2 if this fails?
 ## perl:
