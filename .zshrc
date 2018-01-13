@@ -3,7 +3,7 @@
 ## thefuck:
 # sudo -H pip3 install thefuck # maybe pip2 if this fails?
 ## perl:
-# cpan #?
+# cpan # follow interactive prompt
 ## nvm:
 # https://github.com/creationix/nvm#install-script
 ## avn-nvm:
