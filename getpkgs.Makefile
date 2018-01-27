@@ -5,22 +5,31 @@ getpkgs: $(PKGS)
 
 .ONESHELL:
 $(PKGS):
-	@cd $@
-	PULLOUT=$$(git pull)
-	GITPULLED=$$?
-	echo $$PULLOUT | grep "Already up-to-date." > /dev/null
-	GITTODATE=$$?
-	if [[ $$GITPULLED == 0 ]]; then
-		# git pull succeeded
-		if [[ $$GITTODATE != 0 ]]; then
-			echo "$@: Pulled from git"
-			makepkg -si --needed --noconfirm
-		else
-	    echo "$@: Package not changed"
-	    #makepkg -si --needed --noconfirm
-		fi
-	else
-		echo "$@: Git pull failed"
-		echo $$PULLOUT
+	@echo "$@: Started"
+	cd $@
+
+	# Version info: $$(makepkg --printsrcinfo | grep pkgver | sed 's/\s*pkgver = //')
+
+	# update pkgbuild details:
+	FETCHTEXT=$$(git fetch)
+	if [[ $$? != 0 ]]; then
+		echo "$@: Git fetch failed"
+		echo "$$FETCHTEXT"
 		exit 1
 	fi
+
+	# clear working directory
+	git checkout -- .
+
+	# update to upstream
+	UPSTREAM=$$(git branch --format "%(upstream)")
+	REBASETEXT=$$(git rebase "$$UPSTREAM")
+	if [[ $$? != 0 ]]; then
+		echo "$@: Git rebase failed"
+		echo "$$REBASETEXT"
+		exit 1
+	fi
+
+	# check if an update is available:
+	makepkg -si --needed --noconfirm
+	echo "$@: Installed updated version if applicable"
