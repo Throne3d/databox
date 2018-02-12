@@ -31,5 +31,4 @@ $(PKGS):
 	fi
 
 	# check if an update is available:
-	makepkg -si --needed --noconfirm
-	echo "$@: Installed updated version if applicable"
+	makepkg -si --needed --noconfirm && echo "$@: Installed updated version if applicable"
