@@ -1,4 +1,4 @@
-PKGS != find . -mindepth 1 -maxdepth 1 -type d
+PKGS != find . -mindepth 1 -maxdepth 1 -type d | grep -v ".*\.disabled"
 
 .PHONY: gitpkgs $(PKGS)
 gitpkgs: $(PKGS)
