@@ -706,11 +706,16 @@
     color: #777 !important;
   }
 
-  .apps-toast { color: #222; }
-  #gb#gb a.gb_b, .apps-toast {
+  .apps-toast {
+    color: #222;
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'><feColorMatrix in='SourceGraphic' type='matrix' values='-0.8 0 0 0 0.84 0 -0.8 0 0 0.84 0 0 -0.8 0 0.84 0 0 0 1 0'/></filter></svg>#invert");
     -webkit-filter: invert(90%);
     filter: invert(90%);
+  }
+
+  /*Right-side account area with 'share'*/
+  .docs-material-appbar #docs-header .docs-titlebar-buttons {
+    background-color: #444;
   }
 
   /* Toolbar Menu Search */
