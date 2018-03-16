@@ -473,7 +473,7 @@
   #docos-comment-bubble:hover { background-color: rgba(47,47,47,1); }
 
   /*Diff view, revision history*/
-  .kix-paragraphrenderer .kix-highlighted-revision-diff-overlay { opacity: 0.3; filter: alpha(opacity=30); }
+  .kix-paragraphrenderer .kix-highlighted-revision-diff-overlay { opacity: 0.3; }
   /*.kix-paragraphrenderer .kix-highlighted-revision-diff-overlay + .kix-lineview-content span, .kix-paragraphrenderer .kix-highlighted-revision-diff-overlay + .kix-lineview-content .kix-wordhtmlgenerator-word-node {
     color: unset !important ;
   }*/
