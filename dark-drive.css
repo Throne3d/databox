@@ -913,22 +913,22 @@
 @-moz-document regexp("https?://docs.google.com/document/d/[A-Za-z0-9_\\-]+/pub/?.*") {
 /* Published documents */
 @media screen {
-body {
-  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'><feColorMatrix in='SourceGraphic' type='matrix' values='-0.8 0 0 0 0.84 0 -0.8 0 0 0.84 0 0 -0.8 0 0.84 0 0 0 1 0'/></filter></svg>#invert");
-  -webkit-filter: invert(90%);
-  filter: invert(90%);
-  background-color: #000;
-  -webkit-font-smoothing: antialiased;
-}
-
-#contents {
-  background-color: #FFF;
-  margin: 0; padding: 6px;
+  body {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'><feColorMatrix in='SourceGraphic' type='matrix' values='-0.8 0 0 0 0.84 0 -0.8 0 0 0.84 0 0 -0.8 0 0.84 0 0 0 1 0'/></filter></svg>#invert");
+    background-color: #000;
+    -webkit-font-smoothing: antialiased;
+    filter: invert(90%) hue-rotate(180deg);
+    -webkit-filter: invert(90%) hue-rotate(180deg);
   }
-img {
-  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'><feColorMatrix in='SourceGraphic' type='matrix' values='-0.8 0 0 0 0.84 0 -0.8 0 0 0.84 0 0 -0.8 0 0.84 0 0 0 1 0'/></filter></svg>#invert");
-  -webkit-filter: invert(90%);
-  filter: invert(90%);
-}
+
+  #contents {
+    background-color: #FFF;
+    margin: 0; padding: 6px;
+  }
+  img {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'><feColorMatrix in='SourceGraphic' type='matrix' values='-0.8 0 0 0 0.84 0 -0.8 0 0 0.84 0 0 -0.8 0 0.84 0 0 0 1 0'/></filter></svg>#invert");
+    -webkit-filter: invert(90%);
+    filter: invert(90%);
+  }
 }
 }
