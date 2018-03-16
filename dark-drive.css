@@ -910,7 +910,7 @@
 }
 }
 
-@-moz-document regexp("https?://docs.google.com/document/d/[A-Za-z0-9_\\-]+/pub/?.*") {
+@-moz-document regexp("https?://docs\\.google\\.com/document/d/(e/)?[A-Za-z0-9_\\-]+/pub/?.*") {
 /* Published documents */
 @media screen {
   body {
