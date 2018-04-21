@@ -1,5 +1,3 @@
-._6t5Uh { -webkit-filter: brightness(.7); filter: brightness(.7); }
- /* header bar */
 ._227ZB > span, ._3QwmB._2n758.cCL9P { -webkit-filter: brightness(0.95); filter: brightness(0.95); }
  .LFfrA._3MLiB, div[id=root], html[dir=ltr] { background: rgb(50, 50, 50); }
  body { opacity: 1 !important; }
@@ -126,3 +124,5 @@
 
 /* language skills page */
 ._1i1zF { color: #eaeaea !important; } /* skill name text */
+
+._6t5Uh { -webkit-filter: brightness(.9); filter: brightness(.9); } /* header bar */
