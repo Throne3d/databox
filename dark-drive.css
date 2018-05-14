@@ -221,7 +221,7 @@
   }
 
   .a-nEbBXb .a-U-J-x { color: #aaa; }
-  .a-nEbBXb .a-U-ye-ha>.a-U-J>.a-U-J-x, .a-nEbBXb .a-U-ye-ha>.a-U-J.a-U-J-Wc-uh>.a-U-J-x { color: rgba(192,192,192,.72); }
+  .a-nEbBXb .a-U-ye-ha>.a-U-J>.a-U-J-x, .a-nEbBXb .a-U-ye-ha>.a-U-J.a-U-J-Wc-uh>.a-U-J-x { color: rgb(192,192,192); }
 
   .a-U-ye:not(.a-U-ye-ha) .a-s-T-j .a-s-T-c, .a-U-Ze {
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'><feColorMatrix in='SourceGraphic' type='matrix' values='-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0'/></filter></svg>#invert");
