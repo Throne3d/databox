@@ -103,6 +103,16 @@
   }
   .a-nEbBXb .a-t-J { color: rgba(255, 255, 255, .54); }
 
+  /* row */
+  .a-nEbBXb .a-t-cb {
+    border-bottom: 1px solid #444;
+  }
+
+  /* selected row */
+  .a-nEbBXb .a-t-J-ha .l-t-T-V>.l-Ab-T-r {
+    color: #aaa;
+  }
+
   /* List view folder background */
   .a-t-j.a-t-gc-xl, .a-nEbBXb .a-t-j .a-gd-j {
     background: #333333;
