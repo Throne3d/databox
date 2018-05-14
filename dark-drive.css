@@ -282,6 +282,11 @@
   /*Sidebar line*/
   .a-s-tb-cj-wl { border-left-color: #555; }
 
+  /* divider */
+  .a-nEbBXb .a-U-xc>.a-da-fc-Ug::after, .a-nEbBXb .a-U-xc>.a-da-Ul::before, .a-nEbBXb .a-ji-Gd::before {
+    border-bottom-color: #666;
+  }
+
   /*GetDrive button*/
   .a-nf-Rc-Fa.a-c-d { background-color: #505050; color: #aaa; }
 
