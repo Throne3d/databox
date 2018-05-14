@@ -153,6 +153,11 @@
 
   .a-nEbBXb .a-ok-Ji-ga, .w7Ppu { color: rgba(255, 255, 255, .54); }
 
+  /* tile */
+  .a-dkl3Ye .l-u-xb.l-u-o, .a-dkl3Ye .l-u-xb.l-u-Ab {
+    border-color: #484848;
+  }
+
   /* quick access files detail box */
   .L202Xe {
     background-color: #333;
@@ -162,6 +167,13 @@
   }
   .a-HZnjzd-xb-Np {
     color: rgba(255, 255, 255, 0.54);
+  }
+  /* quick access file tile border */
+  .a-dkl3Ye .L202Xe {
+    border-color: #484848;
+  }
+  .a-dkl3Ye .Ccie2c:hover .L202Xe {
+    border-color: #585858;
   }
 
   /* Grid view folder tab */
@@ -212,14 +224,22 @@
 
   .a-nEbBXb .xd-ij { color: rgba(255,255,255,.38); }
 
+  /* "New" button */
+  .a-D-gc-wKOTTc .a-ec-Gd button.RTMQvb {
+    color: #bbc0c3;
+  }
+
   /* Hovered item */
-  :not(.a-U-ye-ha) > .a-U-J:hover {
-    background: none !important;
+  .a-nEbBXb :not(.a-U-ye-ha)>.a-U-J:hover, .a-nEbBXb :not(.a-U-ye-ha)>.a-U-J-W {
+    background-color: rgba(255,255,255,.04);
   }
 
   /* Selected item */
   .a-U-ag-da > .a-U-H {
-    background-color: #4285F4 !important;
+    background-color: #4285F4 !important; /*old*/
+  }
+  .a-nEbBXb .a-U-ye-ha>.a-U-J {
+    background-color: #3e629c;
   }
 
   /* Selected item text */
