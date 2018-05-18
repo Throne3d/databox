@@ -45,7 +45,6 @@
    ._39kLK { background: #797979 !important; }
    a[data-test="test-out-button"] { opacity: 0.7; }
    a[data-test="red skill-tree-link"] > ._3E0y_ { background: #840000; }
-   ._3qO9M._33VdW { opacity: 0.5; }
    .kHldG { filter: invert(1) hue-rotate(180deg); -webkit-filter: invert(1) hue-rotate(180deg); }
    ._2f1i5 p { color: #696969; }
    ._1sdh6._14IZz { background-color: #8a2312; }
@@ -105,7 +104,7 @@
 
   ._2Hv7w { background: rgb(50, 50, 50); color: #ccc; }
    /* accent letters */
-  ._26pCf /*orange goals buttons*/, ._3gqtq /*blue/white page buttons*/, ._386Rr /*unselected button*/, ._1-PLN /*selected button*/, ._2kA5V, ._26YU4:hover /*settings sidebar buttons*/, ._1bv61 /* ad box */, ._1ZY-H /*pop-up words*/ {
+  ._26pCf /*orange goals buttons*/, ._3gqtq /*blue/white page buttons*/, ._386Rr /*unselected button*/, ._1-PLN /*selected button*/, ._2kA5V, ._26YU4:hover /*settings sidebar buttons*/, ._1bv61 /* ad box */ {
     filter: invert(100%) hue-rotate(180deg);
     -webkit-filter: invert(100%) hue-rotate(180deg);
   }
@@ -123,8 +122,16 @@
     border-color: #aaa;
   }
 
-  /* language skills page */
-  ._1i1zF { color: #eaeaea !important; } /* skill name text */
+  /*HOMEPAGE / language skills page */
+  /* skill name text */
+  ._378Tf { color: #aaaaaa !important; }
 
-  ._6t5Uh { -webkit-filter: brightness(.9); filter: brightness(.9); } /* header bar */
+  /* header bar */
+  ._6t5Uh { -webkit-filter: brightness(.9); filter: brightness(.9); }
+
+  /* - narrow view */
+  /* header & footer */
+  ._3Qsaf, ._6t5Uh {
+    background-color: #3a3a3a;
+  }
 }
