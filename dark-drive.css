@@ -13,7 +13,7 @@
   input.gb_Zd { background: none !important; }
 
   /* Header bar & settings header */
-  .gb_Xa:not(.gb_Za) .gb_Ed, .gb_be {
+  .gb_Xa:not(.gb_Za) .gb_Ed, .gb_be, .gb_de {
     background: #404040;
     color: #aaa;
   }
