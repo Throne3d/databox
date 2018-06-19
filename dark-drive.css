@@ -555,8 +555,7 @@
     color: #ddd !important;
   }
 
-    /* Actual input box */
-
+  /* Actual input box */
   .cell-input, .freezebar-horizontal-handle, .freezebar-vertical-handle, .waffle {
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'><feColorMatrix in='SourceGraphic' type='matrix' values='-0.8 0 0 0 0.84 0 -0.8 0 0 0.84 0 0 -0.8 0 0.84 0 0 0 1 0'/></filter></svg>#invert");
     -webkit-filter: invert(90%);
@@ -703,7 +702,12 @@
   div[id*='grid-table-container'] > canvas {
     filter: invert(90%) hue-rotate(180deg);
     -webkit-filter: invert(90%) hue-rotate(180deg);
+  }
 
+  /* for cells that go off the page screen */
+  .mimic-overlay-canvas {
+    filter: invert(90%) hue-rotate(180deg);
+    -webkit-filter: invert(90%) hue-rotate(180deg);
   }
 
   div[id*='grid-table-container'] > canvas.noinvert {
