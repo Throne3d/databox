@@ -178,6 +178,19 @@
   .a-HZnjzd-xb-Np {
     color: rgba(255, 255, 255, 0.54);
   }
+  /* - active */
+  .a-dkl3Ye .Ccie2c:focus .a-HZnjzd-xb-dc, .a-dkl3Ye .Ccie2c.Pb .a-HZnjzd-xb-dc {
+    background-color: #222;
+  }
+  .a-dkl3Ye .Ccie2c:focus .a-HZnjzd-xb-V, .a-dkl3Ye .Ccie2c.Pb .a-HZnjzd-xb-V {
+    color: #ddd;
+  }
+  .a-dkl3Ye .Ccie2c:focus .a-HZnjzd-xb-Np, .a-dkl3Ye .Ccie2c.Pb .a-HZnjzd-xb-Np {
+    color: rgba(255, 255, 255, 0.54);
+  }
+  .a-dkl3Ye .Ccie2c:focus .L202Xe, .a-dkl3Ye .Ccie2c.Pb .L202Xe {
+    border: 1px solid #aaa;
+  }
   /* quick access file tile border */
   .a-dkl3Ye .L202Xe {
     border-color: #484848;
