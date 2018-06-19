@@ -752,7 +752,7 @@
   }
 
   /*Right-side account area with 'share'*/
-  .docs-material-appbar #docs-header .docs-titlebar-buttons {
+  .docs-material #docs-header .docs-titlebar-buttons {
     background-color: #444;
   }
 
