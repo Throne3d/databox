@@ -423,6 +423,9 @@
 
   /* Search bar */
   .gb_Ud.gb_be { background: rgba(64, 64, 64, 1); }
+
+  /*'Share' popup*/
+  .goog-modalpopup, .modal-dialog { background-color: #333; }
 }
 }
 
