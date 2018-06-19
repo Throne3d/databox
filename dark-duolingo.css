@@ -22,7 +22,7 @@
     -webkit-filter: invert(100%) hue-rotate(180deg);
     /*opacity: 0.7; */
   }
-   /* social buttons? */
+  /* social buttons? */
   .JxO8R:hover ._3-KNY { opacity: 0.6; }
    ._1H-7I { border-bottom: 2px solid #3a3a3a; border-top: 2px solid #3a3a3a; }
    ._3qiOl.TTBxS.w341j, ._2G3uv { opacity: 0.7; }
@@ -59,7 +59,7 @@
    ._2f1i5 td { border-bottom: 2px solid #828282; border-right: 2px solid #828282; }
    ._2f1i5 td:first-child { border-left: 2px solid #828282; }
    ._2f1i5>ol>li { color: #866e6e; }
-   .EayR4>label, .Hb0Y0, .KRKEd._2UAIZ._1LyQh, ._38VWB, ._3cK58, ._3mDrc, h1._1Zqmf, h1._1c--K, ._1Wuie._3F380>.a-Y8L { color: #d6d6d6; }
+   .Hb0Y0, .KRKEd._2UAIZ._1LyQh, ._38VWB, ._3cK58, ._3mDrc, h1._1Zqmf, h1._1c--K, ._1Wuie._3F380>.a-Y8L { color: #d6d6d6; }
    ._23gwq._3JyHj._1LyQh>textarea { color: #000; }
 
   ._3giip { background: rgb(16, 16, 16); }
@@ -109,13 +109,8 @@
     -webkit-filter: invert(100%) hue-rotate(180deg);
   }
 
-  ._2QNyK, ._33XIq {
+  ._33XIq {
     border-color: rgb(191, 191, 191) !important;
-  }
-
-  ._386Rr {
-    /*unselected button color*/
-    color: rgb(38, 38, 38);
   }
 
   ._8X2Bp {
@@ -133,5 +128,27 @@
   /* header & footer */
   ._3Qsaf, ._6t5Uh {
     background-color: #3a3a3a;
+  }
+
+  /*PRACTICE page*/
+  /* - submit buttons */
+  ._1cw2r button {
+    color: #000;
+  }
+
+  /* - article buttons */
+  /* unselected button color*/
+  ._386Rr {
+    color: rgb(38, 38, 38);
+  }
+  ._2QNyK {
+    border-color: rgb(191, 191, 191);
+  }
+
+  /* selected button color */
+  ._1-PLN, ._1-PLN ._3pcg6 {
+    color: #2e421c;
+    background-color: rgb(109, 207, 255);
+    border-color: #8eb76a;
   }
 }
