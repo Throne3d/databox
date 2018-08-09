@@ -573,8 +573,8 @@
 
   /* Actual input box */
   .cell-input, .freezebar-horizontal-handle, .freezebar-vertical-handle, .waffle {
-    -webkit-filter: invert(90%) hue-rotate(180deg);
-    filter: invert(90%) hue-rotate(180deg);
+    -webkit-filter: invert(100%) hue-rotate(180deg);
+    filter: invert(100%) hue-rotate(180deg);
   }
   #t-formula-bar-input .cell-input { filter: unset; -webkit-filter: unset; background-color: #333 !important; color: #AAA; }
 
@@ -715,14 +715,14 @@
 /* Canvas */
   /* See http://www.w3.org/TR/selectors/#lex */
   div[id*='grid-table-container'] > canvas {
-    filter: invert(90%) hue-rotate(180deg);
-    -webkit-filter: invert(90%) hue-rotate(180deg);
+    filter: invert(100%) hue-rotate(180deg);
+    -webkit-filter: invert(100%) hue-rotate(180deg);
   }
 
   /* for cells that go off the page screen */
   .mimic-overlay-canvas {
-    filter: invert(90%) hue-rotate(180deg);
-    -webkit-filter: invert(90%) hue-rotate(180deg);
+    filter: invert(100%) hue-rotate(180deg);
+    -webkit-filter: invert(100%) hue-rotate(180deg);
   }
 
   div[id*='grid-table-container'] > canvas.noinvert {
@@ -975,8 +975,8 @@
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'><feColorMatrix in='SourceGraphic' type='matrix' values='-0.8 0 0 0 0.84 0 -0.8 0 0 0.84 0 0 -0.8 0 0.84 0 0 0 1 0'/></filter></svg>#invert");
     background-color: #000;
     -webkit-font-smoothing: antialiased;
-    filter: invert(90%) hue-rotate(180deg);
-    -webkit-filter: invert(90%) hue-rotate(180deg);
+    filter: invert(100%) hue-rotate(180deg);
+    -webkit-filter: invert(100%) hue-rotate(180deg);
   }
 
   #contents {
