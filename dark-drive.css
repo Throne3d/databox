@@ -749,6 +749,14 @@
     color: #AAA;
   }
 
+  /* while docs loads */
+  #waffle-loading-screen {
+    background-color: #333;
+  }
+  #waffle-loading-screen img {
+    filter: invert(80%);
+  }
+
 /* Navigation and Menu */
   #docs-chrome {
     background: #333 !important;
