@@ -923,6 +923,37 @@
   /*Find dropdown*/
   /*Next/prev button border*/
   .docs-findbar-content .jfk-button-disabled { border-color: #777; }
+
+/* Right sidebar, "companion app switcher" */
+  /* Overall sidebar */
+  .docs-companion-app-switcher-container {
+    background-color: #333;
+    border-top-color: #555;
+  }
+  .companion-app-switcher-container {
+    background-color: #333;
+    border-left-color: #555;
+  }
+
+  /* Individual app icons */
+  /* - on hover */
+  .agca-gab-button-hover .agca-gab-icon-container, .agca-gab-button-open .agca-gab-icon-container {
+    background-color: #4a4a4a;
+  }
+
+  /* Sidebar toggle button */
+  /* - on focus */
+  .companion-collapser-button-focused, .companion-theme-light .companion-collapser-button-focused {
+    background-color: #444;
+  }
+  /* - on hover */
+  .companion-collapser-button-hover, .companion-theme-light .companion-collapser-button-hover {
+    background-color: #4a4a4a;
+  }
+
+  .companion-collapser-button-icon {
+    filter: invert(90%);
+  }
 }
 }
 
