@@ -13,7 +13,7 @@
   input.gb_Zd { background: none !important; }
 
   /* Header bar & settings header */
-  .gb_Xa:not(.gb_Za) .gb_Ed, .gb_be, .gb_de, .gb_ce, .gb_ge, .gb_ke {
+  .gb_Xa:not(.gb_Za) .gb_Ed, .gb_be, .gb_de, .gb_ce, .gb_ge, .gb_ke, .gb_qe {
     background: #404040;
     color: #aaa;
   }
@@ -98,7 +98,7 @@
 
 /* Files */
 /* List view */
-  .a-t, .a-nEbBXb .l-t-T-V>.l-Ab-T-r {
+  .a-t, .a-nEbBXb .l-t-T-V>.l-Ab-T-r, .aabwZd .WYuW0e .M3pype, .aabwZd .WYuW0e .M3pype[data-column-field="6"] {
     color: #aaa;
   }
   .a-nEbBXb .a-t-J { color: rgba(255, 255, 255, .54); }
@@ -107,10 +107,14 @@
   .a-nEbBXb .a-t-cb {
     border-bottom: 1px solid #444;
   }
+  .aabwZd .WYuW0e {
+    border-bottom-color: #3a3a3a;
+  }
 
   /* selected row */
-  .a-nEbBXb .a-t-J-ha .l-t-T-V>.l-Ab-T-r {
+  .a-nEbBXb .a-t-J-ha .l-t-T-V>.l-Ab-T-r, .s55KNe:not(.KBj6Qd) .GZwC2b .jGNTYb, .aabwZd:not(.KBj6Qd) .GZwC2b, .aabwZd:not(.KBj6Qd) .GZwC2b .M3pype[data-column-field="6"] {
     color: #aaa;
+    background-color: #363636;
   }
 
   /* List view folder background */
@@ -134,11 +138,11 @@
   .Hb-ja-Na .a-t-J-ha.a-t-J-Vd-ja.a-t-J-Vd-jh .a-t-cb-oa, .Hb-ja-Na .a-t-J-ha.a-t-J:focus .a-t-cb-oa { border-top-color: transparent; border-bottom-color: transparent; }
 
   /* List view sort bar */
-  .a-t-D {
+  .a-t-D, .N7iPof {
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'><feColorMatrix in='SourceGraphic' type='matrix' values='-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0'/></filter></svg>#invert");
     -webkit-filter: invert(85%);
 
-    background: #fcfcfc !important;
+    background: inherit;
   }
 
   /* List view shared icon */
@@ -164,8 +168,10 @@
   .a-nEbBXb .a-ok-Ji-ga, .w7Ppu { color: rgba(255, 255, 255, .54); }
 
   /* tile */
-  .a-dkl3Ye .l-u-xb.l-u-o, .a-dkl3Ye .l-u-xb.l-u-Ab {
+  .a-dkl3Ye .l-u-xb.l-u-o, .a-dkl3Ye .l-u-xb.l-u-Ab, .a-dkl3Ye .s55KNe .jGNTYb {
+    background-color: #333;
     border-color: #484848;
+    color: rgba(255, 255, 255, .72);
   }
 
   /* quick access files detail box */
