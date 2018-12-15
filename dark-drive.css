@@ -13,7 +13,7 @@
   input.gb_Zd { background: none !important; }
 
   /* Header bar & settings header */
-  .gb_Xa:not(.gb_Za) .gb_Ed, .gb_be, .gb_de, .gb_ce, .gb_ge, .gb_ke, .gb_qe {
+  .gb_Xa:not(.gb_Za) .gb_Ed, .gb_be, .gb_de, .gb_ce, .gb_ge, .gb_ke, .gb_qe, .gb_ue {
     background: #404040;
     color: #aaa;
   }
@@ -24,9 +24,10 @@
   }
 
   /* Search bar outer box */
-  .gbqfqw {
+  .gbqfqw, .gb_af.gb_bf {
     background: #555 !important;
   }
+  input.gb_wf { background: transparent !important; }
   .gb_Nd { color: #ccc !important; }
   .gb_Ad.gb_Rd, .gb_Ce.gb_Te { background: #444 !important; }
 
@@ -51,6 +52,9 @@
 
   /* Search bar 'More search tools' */
   .a-jn-Ma-nb-J { background: #444 !important; color: #aaa !important; border-top-color: #777; }
+  .a-nEbBXb .g-Qb .h-v-x, .a-nEbBXb .h-R-w-d.g-Qb { color: #aaa; }
+  .a-nEbBXb .g-d-wd:not(.g-d-db), .a-nEbBXb .g-d-wd:not(.g-d-db):focus, .a-nEbBXb .g-d-wd:not(.g-d-db).g-d-Pb { color: #aaa; }
+  .a-nEbBXb .a-Va-Zb-ut { border-top-color: #5a5a5a; }
 
   /* Logo, icons */
   .gb_ga.gb_2 {
@@ -112,7 +116,7 @@
   }
 
   /* selected row */
-  .a-nEbBXb .a-t-J-ha .l-t-T-V>.l-Ab-T-r, .s55KNe:not(.KBj6Qd) .GZwC2b .jGNTYb, .aabwZd:not(.KBj6Qd) .GZwC2b, .aabwZd:not(.KBj6Qd) .GZwC2b .M3pype[data-column-field="6"] {
+  .a-nEbBXb .a-t-J-ha .l-t-T-V>.l-Ab-T-r, .aabwZd:not(.KBj6Qd) .GZwC2b, .aabwZd:not(.KBj6Qd) .GZwC2b .M3pype[data-column-field="6"] {
     color: #aaa;
     background-color: #363636;
   }
@@ -168,9 +172,14 @@
   .a-nEbBXb .a-ok-Ji-ga, .w7Ppu { color: rgba(255, 255, 255, .54); }
 
   /* tile */
-  .a-dkl3Ye .l-u-xb.l-u-o, .a-dkl3Ye .l-u-xb.l-u-Ab, .a-dkl3Ye .s55KNe .jGNTYb {
+  .a-dkl3Ye .l-u-xb.l-u-o, /* .a-dkl3Ye .l-u-xb.l-u-Ab, */ .a-dkl3Ye .s55KNe .jGNTYb {
     background-color: #333;
     border-color: #484848;
+    color: rgba(255, 255, 255, .72);
+  }
+  /* selected: */
+  .s55KNe:not(.KBj6Qd) .GZwC2b .jGNTYb /* selected */ {
+    background-color: #2a2a2a;
     color: rgba(255, 255, 255, .72);
   }
 
@@ -211,7 +220,7 @@
   }
 
   /* Grid view folder tab icon */
-  .l-u-o-c-j, .a-nEbBXb .a-c-j::before, .a-nEbBXb .l-u-xb, .l-u-ha .l-u-o-c-j {
+  .l-u-o-c-j, .a-nEbBXb .a-c-j::before, .l-u-ha .l-u-o-c-j {
     background-color: #222222;
   }
 
