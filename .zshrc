@@ -1,4 +1,4 @@
-# dependencies: powerline font, thefuck, perl, nvm, avn-nvm, travis.rb
+# dependencies: powerline font, thefuck, perl, nvm, avn-nvm, travis.rb, lsb_release
 
 ## powerline font for agnoster:
 # https://github.com/robbyrussell/oh-my-zsh/wiki/Themes#agnoster
@@ -21,7 +21,7 @@
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/throne3d/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -70,8 +70,8 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git bundler command-not-found gem screen thefuck heroku)
-# gpg-agent ssh-agent
+plugins=(git bundler command-not-found)
+# gpg-agent ssh-agent gem screen
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,52 +106,18 @@ source $ZSH/oh-my-zsh.sh
 
 DEFAULT_USER="throne3d"
 
-eval $(perl -I${HOME}/perl5/lib/perl5 -Mlocal::lib)
+# eval $(perl -I${HOME}/perl5/lib/perl5 -Mlocal::lib)
 
 alias win32="WINEPREFIX='$HOME/prefix32' WINEARCH=win32"
-
-function mountgdrive() {
-  if [[ ! -e "$HOME/GDriveMount" ]]
-  then
-    if ! mountpoint -q -- "$HOME/GDriveMount"
-    then
-      mkdir "$HOME/GDriveMount"
-    fi
-  fi
-  rclone mount gdrive: $HOME/GDriveMount &
-}
-function unmountgdrive() {
-  fusermount -u "$HOME/GDriveMount"
-}
-
-function mountonedrive() {
-  if [[ ! -e "$HOME/OneDriveMount" ]]
-  then
-    if ! mountpoint -q -- "$HOME/OneDriveMount"
-    then
-      mkdir "$HOME/OneDriveMount"
-    fi
-  fi
-  rclone mount onedrive: $HOME/OneDriveMount &
-}
-function unmountonedrive() {
-  fusermount -u "$HOME/OneDriveMount"
-}
 
 # to cache C compilation stuff
 export PATH="/usr/lib/ccache/bin:$PATH"
 export USE_CCACHE=1
 export CCACHE_COMPRESS=1
 
-# for the Jack compiler for LineageOS
-export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4G"
-
 # Make RM safer
 alias rm='rm -I'
 unsetopt RM_STAR_SILENT
-
-# Add Scala to PATH
-export PATH="$PATH:$HOME/scala-2.12.2/bin"
 
 # distcc
 # export DISTCC_HOSTS='192.168.1.160'
@@ -168,11 +134,9 @@ export VK_LAYER_PATH=$VULKAN_SDK/x86_64/etc/explicit_layer.d
 export EDITOR=nano
 
 # Arch changes
-if lsb_release -i | grep "Arch" > /dev/null; then
+if which lsb_release > /dev/null && lsb_release -i | grep "Arch" > /dev/null; then
   # Java Home
   export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
-  # Gem executables
-  export PATH="/home/throne3d/.gem/ruby/2.4.0/bin:$PATH"
 fi
 
 # For local node module commands with zsh
@@ -185,13 +149,18 @@ export NVM_DIR="$HOME/.nvm"
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
 # Linuxbrew
-export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
-export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
+if test -d /home/linuxbrew/; then
+  export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+  export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
+  export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
+fi
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# added by travis gem
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
 # added by travis gem
 [ -f /home/throne3d/.travis/travis.sh ] && source /home/throne3d/.travis/travis.sh
