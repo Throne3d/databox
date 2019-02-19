@@ -150,9 +150,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Linuxbrew
 if test -d /home/linuxbrew/; then
-  export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-  export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
-  export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
+  eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 fi
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
