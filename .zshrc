@@ -152,12 +152,8 @@ if test -d /home/linuxbrew/; then
   eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 fi
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# go
+export GOPATH=$HOME/Documents/code/go/
 
-# added by travis gem
-[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
-
-# added by travis gem
-[ -f /home/throne3d/.travis/travis.sh ] && source /home/throne3d/.travis/travis.sh
+# rbenv
+which rbenv > /dev/null && eval "$(rbenv init -)"
