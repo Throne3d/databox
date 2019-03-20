@@ -17,6 +17,9 @@
     background: #404040 !important;
     color: #aaa;
   }
+  .a-D-B-WErN3d-j {
+    border-bottom-color: #555;
+  }
 
   /* +<Google+ Username> */
   #gb#gb a.gb_P, #gb#gb span.gb_P {
@@ -99,6 +102,12 @@
   .g-Qa-rc { background-color: #666; color: #aaa; }
   svg.a-s-fa-Ha-pa { fill: #aaa !important; } /* Doesn't seem to work â fill is hardcoded in HTML? */
   .g-Qa-Sa { background-color: #333; }
+
+  /* apps sidebar */
+  .Kk7lMc-Yb-Il-j {
+    background-color: #444;
+    border-left-color: #555;
+  }
 
 /* Files */
 /* List view */
@@ -518,9 +527,11 @@
     border-bottom: none !important;
   }
 
+  /* ruler inner
   .kix-ruler-background-inner, .docs-ruler-background-inner {
     background: #444 !important;
   }
+  */
 
   .kix-ruler-face-number {
     color: #aaa !important;
@@ -528,6 +539,12 @@
 
   .kix-ruler-face-minor-division, .kix-ruler-face-major-division {
     border-left: 1px solid #aaa !important;
+  }
+
+  /* ruler outer */
+  .docs-gm .docs-horizontal-ruler, .docs-gm #kix-vertical-ruler {
+    -webkit-filter: invert(90%);
+    filter: invert(90%);
   }
 
   /* Navigation and Menu */
@@ -820,10 +837,49 @@
     background: #333 !important;
   }
 
+/* Share button */
+  /* disabled button, on page load */
+  .docs-gm #docs-titlebar-share-client-button .jfk-button-disabled {
+    -webkit-filter: invert(90%);
+    filter: invert(90%);
+  }
+  /* disabled icon, on page load */
+  .docs-gm #docs-titlebar-share-client-button .jfk-button-disabled .scb-button-icon {
+    -webkit-filter: invert(80%);
+    filter: invert(80%);
+  }
+
 /* Conversation button */
   .jfk-button-standard.jfk-button-disabled { background-color: #505050; }
 
   /* Toolbar strip */
+
+  /* deselected buttons */
+  .docs-gm .docs-menubar .goog-control {
+    color: #aaa;
+  }
+  /* hovered buttons */
+  .docs-gm .docs-menubar .goog-control-hover {
+    background-color: #4a4a4a;
+  }
+  /* clicked menu buttons */
+  .docs-gm .docs-menubar .goog-control-active, .docs-gm .docs-menubar .goog-control:hover:active {
+    background-color: #555;
+  }
+  /* opened menu buttons */
+  .docs-gm .docs-menubar .goog-control-open {
+    background-color: #4a4a4a;
+  }
+
+  /* button accelerators (hotkeys) */
+  .docs-gm .goog-menuitem-accel, .docs-gm .goog-menuitem-disabled .goog-menuitem-accel {
+    color: #9aa0a6;
+  }
+
+  /* disabled button accelerators (hotkeys) */
+  .goog-menuitem-disabled .goog-menuitem-accel, .goog-menuitem-disabled .goog-menuitem-content {
+    color: #80868b !important;
+  }
 
   .goog-toolbar-separator.goog-inline-block {
     border-left: 1px solid #666 !important;
@@ -877,6 +933,12 @@
   /*Fix hover over right nav-bar things*/
   .goog-button-hover {
     background-color: #333 !important;
+  }
+
+  /* header buttons when loading */
+  .docs-gm .docs-menubar .goog-control-disabled {
+    background-color: #383838;
+    color: #aaa;
   }
 
 /*Fix the doctitle thing to be darker*/
@@ -969,6 +1031,11 @@
   .companion-collapser-button-icon {
     filter: invert(90%);
   }
+
+  /* Scroll bar! New fancy scrollbar */
+  ::-webkit-scrollbar-thumb, .docs-gm-sidebars ::-webkit-scrollbar-thumb {
+    background-color: #444;
+  }
 }
 }
 
@@ -977,7 +1044,40 @@
 @media screen {
   /* Fix 'share' dialog (and a ton of buttons) */
   .goog-menuitem, .goog-tristatemenuitem, .goog-filterobsmenuitem, .apps-share-chips-input, .goog-menuitem-highlight .goog-menuitem-content, .goog-menuitem-hover .goog-menuitem-content { color: #AAA; }
-  .modal-dialog, .modal-dialog-title, .modal-dialog-content, .toggle-link, .simple-sharing-link-heading, .simple-sharing-people-heading, .ia-invite-controls-area { background-color: #333; color: #AAA; }
+
+  /* outer box background */
+  .docs-gm-dialogs .modal-dialog, .docs-gm-dialogs .docs-offline-optinpromo.jfk-bubble {
+    background-color: #333;
+    color: #aaa;
+  }
+
+  /* inner box background */
+  .modal-dialog, .modal-dialog-title, .modal-dialog-content, .toggle-link, .simple-sharing-link-heading, .simple-sharing-people-heading, .ia-invite-controls-area {
+    background-color: #333;
+    color: #aaa;
+  }
+
+  /* "loading" text */
+  .docs-gm-dialogs .modal-dialog-title-text, .docs-gm-dialogs .docs-offline-optinpromo-title-text {
+    color: #aaa;
+  }
+  /* and spinner icon */
+  .apps-share-chips-icon-sprite-person, .apps-share-chips-icon-x, .rs-role-icon, .modal-dialog .goog-option-selected, .jfk-checkbox-checked .jfk-checkbox-checkmark, .vpc-icon-holder .apps-share-sprite, .jfk-freestanding-menu-button.waffle-kennedy-column-menu-button, .share-client-spinner, .goog-menuitem-checkbox, .goog-menuitem-icon, .docs-explore-widget-icon, .docs-explore-sidebar-title-close-icon.jfk-button-clear-outline {
+  -webkit-filter: invert(90%);
+  filter: invert(90%);
+  }
+
+  /* "link copied to clipboard" box */
+  .docs-gm-dialogs .jfk-butterBar-info {
+    background-color: #4567a1;
+    color: #bbb;
+  }
+  /* and corresponding icon */
+  .docs-gm-dialogs .share-butter-icon {
+    -webkit-filter: invert(90%);
+    filter: invert(90%);
+  }
+
   .goog-modalpopup-bg, .modal-dialog-bg { background-color: #333; }
   .link-management-url-input, .link-management-url-input:focus, .jfk-textinput { background-color: #444; background-image: none; color: #AAA !important; }
   .link-management-select, .link-management-copy-link-button, .link-management-copy-link-button.jfk-button-disabled, .jfk-button-standard.jfk-button-clear-outline, .link-management-url-container, .jfk-button-standard, .simple-sharing-note-text-area, .inviter-recipient-area, .goog-flat-menu-button, .ac-renderer, .slc-input, .share-fmb, .goog-toolbar-combo-button-open .goog-toolbar-combo-button-input, .goog-toolbar-combo-button-open, .jfk-button-standard.jfk-button-checked, .jfk-button-standard.jfk-button-clear-outline.jfk-button-checked, .modal-dialog-buttons button, .hsv-input, .hsva-input, .docs-explore-widget { background-color: #444; background-image: none; color: #AAA !important; border: solid 1px #777;}
@@ -991,11 +1091,6 @@
   .apc-name { color: rgb(170, 170, 170); }
   .apc-email-contents, .apc-detail { color: rgba(170, 170, 170, 0.87); }
   .goog-option-selected .goog-menuitem-content { color: #DDD; }
-  .apps-share-chips-icon-sprite-person, .apps-share-chips-icon-x, .rs-role-icon, .modal-dialog .goog-option-selected, .jfk-checkbox-checked .jfk-checkbox-checkmark, .vpc-icon-holder .apps-share-sprite, .jfk-freestanding-menu-button.waffle-kennedy-column-menu-button, .share-client-spinner, .goog-menuitem-checkbox, .goog-menuitem-icon, .docs-explore-widget-icon, .docs-explore-sidebar-title-close-icon.jfk-button-clear-outline {
-  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'><feColorMatrix in='SourceGraphic' type='matrix' values='-0.8 0 0 0 0.84 0 -0.8 0 0 0.84 0 0 -0.8 0 0.84 0 0 0 1 0'/></filter></svg>#invert");
-  -webkit-filter: invert(90%);
-  filter: invert(90%);
-  }
   .vpc-change-link, .ap-learn-more-link, .vs-info-text a, .vs-learn-more-text a, .ia-add-message-link, .simple-sharing-link-sharing-learn-more, .docs-explore-card-more-button, a:link  { color: #6187ca }
   .ss-saver-message { background-color: #5d5845; color: #DADADA; border-color: #907542; }
   .jfk-checkbox-checked, .ia-send-notifications-checkbox, .notification-options-checkbox { background-color: rgba(255,255,255,.05); }
