@@ -26,7 +26,34 @@
     color: #aaa !important;
   }
 
-  /* Search bar outer box */
+  /* Search bar outer box, deselected */
+  .gb_ne.gb_la {
+    background-color: #3a3a3a;
+  }
+  /* search bar form transparency */
+  .gb_Ie {
+    background: transparent !important;
+  }
+  /* and placeholder text visibility */
+  .gb_Ie::placeholder {
+    color: #888 !important;
+  }
+
+  /* opened search bar top box */
+  .gb_ne.gb_la.gb_oe {
+    background-color: #444;
+  }
+
+  /* search result divider */
+  .gssb_l {
+    background-color: #555;
+  }
+  /* search result hover */
+  .gssb_i {
+    background-color: #444;
+  }
+
+  /* search bar (old) */
   .gbqfqw, .gb_af.gb_bf {
     background: #555 !important;
   }
