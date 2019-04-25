@@ -40,7 +40,6 @@
    a[data-test="blue skill-tree-link"] > ._1z_vo._3hKMG._2VAWl { background: #4fc6ff; }
    ._3noOL._9l65a._3aw24 { opacity: 0.7; }
    .skill-icon.red { background: #840000; }
-   ._2GJb6 button { filter: invert(1) hue-rotate(180deg); -webkit-filter: invert(1) hue-rotate(180deg); }
    ._39kLK { background: #797979 !important; }
    a[data-test="test-out-button"] { opacity: 0.7; }
    a[data-test="red skill-tree-link"] > ._3E0y_ { background: #840000; }
@@ -62,10 +61,6 @@
    ._23gwq._3JyHj._1LyQh>textarea { color: #000; }
 
   ._3giip { background: rgb(16, 16, 16); }
-   /* main review page background */
-  /*._3GXmV._1sntG { background: rgb(250, 250, 250); }
-   */ /*bottom bar "review lesson" etc*/
-  ._3GXmV._1sntG { filter: invert(1) hue-rotate(180deg); -webkit-filter: invert(1) hue-rotate(180deg); }
 
   ._2GNNM._3F380 { background: #062738; }
    .svQU_ ._1l6NK, .svQU_ { background: #610400; }
@@ -115,6 +110,13 @@
     border-color: #aaa;
   }
 
+
+
+  /*** ACTUAL GOOD CSS ***/
+  body {
+    color: #d6d6d6;
+  }
+
   /*HOMEPAGE / language skills page */
   /* skill name text */
   ._378Tf { color: #aaaaaa !important; }
@@ -148,6 +150,15 @@
     border-color: #2a2a2a;
   }
 
+  /*checkpoints*/
+  /* disabled; also disabled 'check' button on practice page */
+  ._2arQ0._28JSG:after, ._2arQ0:disabled:after {
+    background-color: #222;
+  }
+  ._2arQ0._28JSG, ._2arQ0:disabled {
+    color: #444;
+  }
+
   /*friends list*/
   /* headers */
   ._1JZEb {
@@ -167,9 +178,29 @@
   }
 
   /*PRACTICE page*/
+  /* - progress bar */
+  /* bar background */
+  .MAF30 {
+    background-color: #222;
+  }
+  /* bar fill */
+  ._1TkZD {
+    background-color: #6bb300;
+  }
+
+  /* - text box */
+  ._1py6s, ._2fPEB {
+    border-color: #444;
+  }
+
   /* - submit buttons */
   ._1cw2r button {
     color: #000;
+  }
+  /* "skip" / "check" bar */
+  ._3GXmV {
+    border-top-color: #333;
+    background-color: #1a1a1a;
   }
 
   /* - article buttons */
