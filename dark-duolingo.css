@@ -15,7 +15,7 @@
    h1, h2 { color: rgb(150, 150, 150); }
    ._2wVgY { background: rgb(25, 25, 25); }
    .a5SW0 { border: 2px solid #3a3a3a; }
-   ._3-W7n, ._3-KNY, ._1JZEb, ._2y_Xo, ._1RsqU { opacity: 0.5; }
+   ._3-W7n, ._2y_Xo, ._1RsqU { opacity: 0.5; }
 
   /*.JxO8R:hover ._3-W7n, .JxO8R:hover ._2y_Xo, ._1m5BS._2tSPu, ._27HOo._2tSPu, ._1V9bF._1AthD.B1eV7._1lig4._3IS_q*/ ._1AthD {
     filter: invert(100%) hue-rotate(180deg);
@@ -23,7 +23,6 @@
     /*opacity: 0.7; */
   }
   /* social buttons? */
-  .JxO8R:hover ._3-KNY { opacity: 0.6; }
    ._1H-7I { border-bottom: 2px solid #3a3a3a; border-top: 2px solid #3a3a3a; }
    ._3qiOl.TTBxS.w341j, ._2G3uv { opacity: 0.7; }
    ._3viv6._2MfAy._3PU7E._2XSZu, ._2_AGA, ._3gA3V.cQcsw, .g-M5R { -webkit-filter: brightness(0.7); filter: brightness(0.7); }
@@ -104,9 +103,8 @@
 
   ._2Hv7w { background: rgb(50, 50, 50); color: #ccc; }
    /* accent letters */
-  ._26pCf /*orange goals buttons*/, ._3gqtq /*blue/white page buttons*/, ._386Rr /*unselected button*/, ._1-PLN /*selected button*/, ._2kA5V, ._26YU4:hover /*settings sidebar buttons*/, ._1bv61 /* ad box */ {
+  ._26pCf /*orange goals buttons*/, ._3gqtq /*blue/white page buttons*/, ._386Rr /*unselected button*/, ._1-PLN /*selected button*/, ._2kA5V, ._26YU4:hover /*settings sidebar buttons*/ {
     filter: invert(100%) hue-rotate(180deg);
-    -webkit-filter: invert(100%) hue-rotate(180deg);
   }
 
   ._33XIq {
@@ -120,9 +118,47 @@
   /*HOMEPAGE / language skills page */
   /* skill name text */
   ._378Tf { color: #aaaaaa !important; }
+  /* skills */
+  ._3zkuO, .ewiWc {
+    filter: invert(100%) hue-rotate(180deg) brightness(150%);
+  }
 
   /* header bar */
-  ._6t5Uh { -webkit-filter: brightness(.9); filter: brightness(.9); }
+  ._6t5Uh { filter: brightness(.9); }
+
+  /* ad box */
+  ._1bv61 {
+    filter: invert(100%) hue-rotate(180deg) brightness(120%);
+  }
+
+  /* sidebar boxes */
+  ._1E3L7 {
+    border-color: #444;
+  }
+
+  /*crown level*/
+  /* icon */
+  ._2vQZX {
+    filter: invert(100%) hue-rotate(180deg);
+  }
+
+  /*buttons (shop button, friends buttons, etc)*/
+  .oNqWF:after {
+    background-color: #444;
+    border-color: #2a2a2a;
+  }
+
+  /*friends list*/
+  /* headers */
+  ._1JZEb {
+    border-bottom-color: #555;
+  }
+  /* people dividers */
+  .JxO8R {
+    border-bottom-color: #444;
+  }
+  /* people */
+  ._3-KNY { color: #aaa; }
 
   /* - narrow view */
   /* header & footer */
