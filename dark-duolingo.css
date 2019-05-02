@@ -111,13 +111,60 @@
   }
 
 
-
   /*** ACTUAL GOOD CSS ***/
   body {
     color: #d6d6d6;
   }
 
   /*HOMEPAGE / language skills page */
+  /* header bar */
+  ._2EZRi {
+    background-color: #333;
+    border-bottom-color: #222;
+    /*color: #aaa;*/
+  }
+  /* header pop-overs */
+  ._1qcTI, ._3bFAF {
+    background-color: #222;
+    border-color: #444;
+  }
+  /* header pop-over lists (...) */
+  ._2JYbA {
+    border-bottom-color: #333;
+  }
+  /* language selector */
+  ._2jbOb .U_ned {
+    color: #aaa;
+    border-bottom-color: #333;
+  }
+  /* - selected */
+  ._2jbOb ._2seHl {
+    background-color: #006999;
+  }
+  /* - hovered */
+  ._2jbOb .U_ned:hover {
+    background-color: #444;
+  }
+  /* "add a new course" hovered */
+  ._2jbOb ._1rf8o:hover {
+    background-color: #444;
+  }
+  /* separator */
+  ._3FqQY .P2ZJR:after {
+    background-color: #555;
+  }
+
+  /* notifications */
+  ._1Vhap {
+    color: #aaa;
+  }
+  .pAHKo {
+    color: #aaa;
+  }
+  ._2d3we {
+    color: #aaa;
+  }
+
   /* skill name text */
   ._378Tf { color: #aaaaaa !important; }
   /* skills */
